@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mini Puzzle App 💖</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+
+<body>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+  <source src="accessories/song.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+
+  <img src="accessories/avatar.jpg" class="avatar">
+
+  <h2>COUCOUUU!!! Ca te dit un tour? hihi</h2>
+
+  <button onclick="goPuzzle()">Oui</button>
+
+  <button id="noBtn">Non</button>
+
+</div>
+
+
+<!-- PAGE 2 PUZZLE -->
+<div id="page2" class="page">
+
+  <h2>Arrange d'abord ce puzzle 🧩</h2>
+
+  <div id="puzzle"></div>
+
+</div>
+
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+  <h2>Tu peux quitter si tu veux 😏</h2>
+
+  <button onclick="showFunny()">D'accord!!</button>
+
+  <button onclick="startQuiz()">Nann, Pas encore!😘</button>
+
+</div>
+
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+
+  <img src="accessories/funny.jpeg" width="250">
+
+  <h3>Tu joues avec qui toii 😏</h3>
+
+  <button onclick="goTired()">Pardonn</button>
+
+</div>
+
+
+<!-- PAGE 5 QUIZ -->
+<div id="page5" class="page quiz">
+
+  <div class="quiz-box">
+
+    <h2 id="question"></h2>
+
+    <div id="options"></div>
+
+  </div>
+
+</div>
+
+
+<!-- PAGE 6 RESULT -->
+<div id="page6" class="page result">
+
+  <!-- Frames -->
+  <div class="frames">
+
+    <div class="frame f1"><img src="accessories/Photo1.jpeg"></div>
+    <div class="frame f2"><img src="accessories/Photo2.jpeg"></div>
+    <div class="frame f3"><img src="accessories/Photo3.jpeg"></div>
+    <div class="frame f4"><img src="accessories/Photo4.jpeg"></div>
+
+    <div class="frame f5"><img src="accessories/Photo5.jpeg"></div>
+    <div class="frame f6"><img src="accessories/Photo6.jpeg"></div>
+    <div class="frame f7"><img src="accessories/Photo7.jpeg"></div>
+    <div class="frame f8"><img src="accessories/Photo8.jpeg"></div>
+
+  </div>
+
+  <h2>🎉 Félicitations 🎉</h2>
+
+  <p>Tu es incroyable!! ❤️❤️❤️</p>
+
+  <button onclick="openGift()">
+    Ouvre mon cadeau ✨
+  </button>
+
+</div>
+
+
+<!-- PAGE 7 ENVELOPE -->
+<div id="page7" class="page envelope-page">
+
+  <div class="envelope-box" onclick="openLetter()">
+
+    <img src="accessories/envelope.jpg" class="envelope">
+
+  </div>
+
+</div>
+
+
+<!-- PAGE 8 LETTER -->
+<div id="page8" class="page">
+
+  <div class="letter">
+
+    <h2>My Letter 💌</h2>
+
+    <p>
+
+      Très chère Ben,<br><br>
+
+      Je ne sais même pas par où commencer…
+Parce que parler de toi, parler de nous, c’est toujours rempli d’émotions.
+
+Je t’ai déjà fait une déclaration à ton anniversaire, mais aujourd’hui, avec la Saint-Valentin, je me suis dit que c’était encore une belle occasion. On est toutes les deux célibataires, je ne suis pas là pour regarder un film d’horreur avec toi, alors j’ai eu cette idée pour te rappeler à quel point tu comptes pour moi.
+
+Honnêtement, je dis souvent que Dieu m’a bénie avec une amitié saine, sincère et rare. Wallah, je n’aurais jamais pu rêver mieux que toi. Tu as toujours été là pour moi, même quand toi aussi tu traversais des moments difficiles. Tu sais trouver les mots justes, sans jamais en faire trop, sans jamais me faire sentir seule. Tu sais apaiser, rassurer, comprendre.
+
+Parfois, je me dis que si, dans une autre vie, j’étais un homme… tu serais ma femme 😂💗
+Parce que tu mérites tellement le meilleur du monde, et je pèse mes mots. Tu es une personne en or, avec un cœur pur, une âme belle, et une force incroyable.
+
+Je prie sincèrement pour que nous trouvions l’amour vrai. Celui qui respecte, qui rassure, qui élève. Je prie pour que nos rêves les plus précieux se réalisent, que nos projets prennent forme, que notre vision devienne réalité. Je veux nous voir réussir, briller, être heureuses — chacune dans sa vie, mais toujours liées.
+
+Aujourd’hui, je ne célèbre pas seulement l’amour.
+Je célèbre notre amitié.
+
+Parce que là où certaines relations nous ont déçues, c’est notre amitié qui nous a maintenues debout. Quand on était brisées, fatiguées, à bout… on se relevait ensemble, à la petite cuillère 😂💞 On se comprenait sans parler. On se soutenait sans condition.
+
+Que Dieu te bénisse et te protège encore plus.
+Qu’Il nous garde longtemps l’une pour l’autre.
+Qu’on devienne riches, heureuses, accomplies…
+Et qu’on vieillisse ensemble comme sur les photos Pinterest 💖✨
+
+Merci d’être toi.
+Merci d’être ma personne.
+Merci d’être ma sœur de cœur.<br><br>
+
+À ma Valentine,
+Avec tout mon amour,<br>
+Yvette 💕
+
+    </p>
+
+  </div>
+
+</div>
+
+<script>
+(function(){
+ emailjs.init("rPhblt9E20Efp8I-s");
+})();
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
